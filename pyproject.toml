@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "east-profile-recon"
+version = "0.1.0"
+description = "Electron-density profile reconstruction from EAST reflectometry data"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "h5py>=3.8",
+    "torch>=2.2",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+east-profile-recon = "east_profile_recon.core:main"
+east-profile-evaluate = "east_profile_recon.evaluation:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

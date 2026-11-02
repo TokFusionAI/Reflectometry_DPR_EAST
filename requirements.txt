@@ -1,0 +1,11 @@
+# Core numerics and data I/O
+numpy>=1.24
+scipy>=1.10
+h5py>=3.8
+
+# PyTorch computation
+# Install the appropriate CPU or CUDA build for your platform.
+torch>=2.2
+
+# Plotting
+matplotlib>=3.7
